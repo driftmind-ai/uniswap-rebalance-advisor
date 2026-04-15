@@ -1,0 +1,11 @@
+{
+  "skill": "uniswap-swap-planner",
+  "chain": "xlayer",
+  "inputSymbol": "USDC",
+  "outputSymbol": "WOKB",
+  "tradeUsd": 3,
+  "confirmReadyUrl": "https://app.uniswap.org/swap?chain=xlayer&inputCurrency=0x74b7f16337b8972027f6196a17a631ac6de26d22&outputCurrency=0xe538905cf8410324e03a5a23c1c177a474d59b2b&value=3&field=INPUT",
+  "stopCondition": "before_execution",
+  "source": "recorded follow-up planner step from the demo video",
+  "status": "captured"
+}

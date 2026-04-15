@@ -1,6 +1,6 @@
 ---
 name: uniswap-rebalance-advisor
-description: "Decide whether a portfolio should hold, rebalance, or stop as blocked, then prepare a concrete Uniswap planner handoff for the fixed X Layer USDC -> WOKB hero path"
+description: "Use when an agent needs a bounded rebalance decision before opening Uniswap on X Layer for the current release hero path"
 version: "1.0.0"
 author: "Kleggy"
 tags:
@@ -12,28 +12,54 @@ tags:
 
 # Uniswap Rebalance Advisor
 
-## Workflow
+## Overview
 
-1. Inspect current holdings and target allocation.
-2. Compute current weights and drift.
-3. Return one decision:
-   - `hold`
-   - `rebalance`
-   - `blocked`
-4. If `rebalance` and the result matches the first-pass hero path, prepare:
-   - primary sell symbol
-   - primary buy symbol
-   - `tradeUsd`
-   - a concrete Uniswap planner handoff URL
-   - a ready-to-use downstream prompt for `uniswap-swap-planner`
-   - `operatorAction = confirm_swap`
-5. If the result falls outside the first-pass hero path, return `unsupported_pair` at the autochain layer.
-6. If constraints block the safe pair, return `blocked` and explain why.
+Bounded decision layer for X Layer portfolio rebalancing. It returns
+`hold`, `rebalance`, or `blocked`, and for the supported hero path it prepares
+an `uniswap-swap-planner` handoff instead of executing the swap.
 
-## Routing Rules
+## When to Use
 
-- Fixed first-pass hero chain: `X Layer`
-- Fixed first-pass hero pair: `USDC -> WOKB`
-- Hero holdings example: `USDC 10`, `WOKB 0`, target `50 / 50`
-- The semi-auto chain contract exposes a downstream planner prompt, not an autonomous runtime invocation
-- Do not claim that this skill signs or executes a live swap autonomously.
+- need a pre-trade rebalance decision for an X Layer portfolio
+- need one stablecoin-input rebalance sized before opening Uniswap
+- need a safe stop state when constraints block the route
+- need a confirm-ready planner handoff, not autonomous execution
+
+## Quick Reference
+
+- Inputs:
+  - holdings with `symbol`, `valueUsd`, and `targetPercent`
+  - `driftThresholdPercent`
+  - optional routing constraints
+- Outputs:
+  - `hold`
+  - `rebalance`
+  - `blocked`
+- Prepared handoff fields on the supported path:
+  - `tradeUsd`
+  - `plannerUrl`
+  - `plannerHandoff`
+  - `operatorAction = confirm_swap`
+
+## Supported Path
+
+- verified hero path:
+  - `X Layer + USDC -> WOKB`
+- hero example:
+  - `USDC 10`, `WOKB 0`, target `50 / 50`
+- downstream planner skill:
+  - `uniswap-swap-planner`
+
+## Proof Boundary
+
+- treat the current release as a prepared handoff plus an operator-confirmed
+  final step
+- do not describe this repo as an autonomous swap executor
+- do not generalize beyond the current `X Layer + USDC -> WOKB` hero path
+
+## Do Not Use For
+
+- generic multi-pair routing
+- reverse routing such as `WOKB -> USDC`
+- autonomous execution or signing
+- non-stablecoin input amount conversion

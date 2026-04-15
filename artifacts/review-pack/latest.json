@@ -1,0 +1,12 @@
+{
+  "reviewId": "2026-04-15-xlayer-usdc-wokb-hero-review",
+  "evidenceMode": "hero-review-pack",
+  "indexPath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/index.json",
+  "notePath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/review-note.md",
+  "heroDecisionPath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/hero-decision.json",
+  "plannerStepPath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/planner-step.json",
+  "txNotePath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/recorded-tx-note.json",
+  "videoPromptOutputPath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/video-prompt-output.json",
+  "videoPlannerOutputPath": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/video-planner-output.json",
+  "scope": "Prepared handoff plus operator-confirmed final step. No autonomous final execution claim."
+}

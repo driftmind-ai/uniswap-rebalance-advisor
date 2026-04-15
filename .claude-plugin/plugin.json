@@ -1,6 +1,6 @@
 {
   "name": "uniswap-rebalance-advisor",
-  "description": "Constraint-aware X Layer portfolio rebalance skill that decides hold, rebalance, or blocked and prepares the next Uniswap planning step",
+  "description": "Use when an agent needs a bounded rebalance decision before opening Uniswap on X Layer for the current release hero path",
   "version": "1.0.0",
   "author": {
     "name": "Kleggy"

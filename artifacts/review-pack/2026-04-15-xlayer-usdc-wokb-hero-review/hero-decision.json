@@ -1,0 +1,7 @@
+{
+  "decision": "rebalance",
+  "sellSymbol": "USDC",
+  "buySymbol": "WOKB",
+  "tradeUsd": 5,
+  "chain": "xlayer"
+}

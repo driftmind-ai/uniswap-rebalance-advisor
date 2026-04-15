@@ -1,0 +1,9 @@
+{
+  "network": "eip155:196",
+  "networkName": "X Layer",
+  "txHash": "0x19acc4267e0954101d18399329023e357508813845944e95e94863d83c0f4929",
+  "explorerUrl": "https://web3.okx.com/explorer/x-layer/tx/0x19acc4267e0954101d18399329023e357508813845944e95e94863d83c0f4929",
+  "source": "operator-confirmed live demo transaction",
+  "status": "accepted_on_l2",
+  "note": "The linked tx matches the recorded video prompt variant with target 70/30, drift 1, and min trade 1, which produced a 3 USDC prepared handoff on the same hero pair. The bounded release contract still remains the 5 USDC prepared handoff."
+}

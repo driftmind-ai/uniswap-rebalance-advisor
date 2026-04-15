@@ -265,7 +265,7 @@ export function createUniswapRebalanceAdvisor(config: AdvisorConfig) {
         },
         executionPlan: {
           nextSkill: "uniswap-swap-planner",
-          optionalSkills: ["treasury-guard-skill"],
+          optionalSkills: [],
           steps: [
             "Review the proposed sell and buy assets.",
             "Pass the pair and tradeUsd to uniswap-swap-planner for route planning.",

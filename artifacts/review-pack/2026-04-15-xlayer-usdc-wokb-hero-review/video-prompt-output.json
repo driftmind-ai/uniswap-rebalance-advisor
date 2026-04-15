@@ -1,0 +1,55 @@
+{
+  "decision": "rebalance",
+  "analysis": {
+    "totalValueUsd": 10,
+    "driftThresholdPercent": 1,
+    "assets": [
+      {
+        "symbol": "USDC",
+        "valueUsd": 10,
+        "currentPercent": 100,
+        "targetPercent": 70,
+        "driftPercent": 30,
+        "status": "over"
+      },
+      {
+        "symbol": "WOKB",
+        "valueUsd": 0,
+        "currentPercent": 0,
+        "targetPercent": 30,
+        "driftPercent": -30,
+        "status": "under"
+      }
+    ]
+  },
+  "recommendation": {
+    "sellSymbol": "USDC",
+    "buySymbol": "WOKB",
+    "tradeUsd": 3,
+    "rationale": [
+      "USDC is the most overweight asset versus target allocation.",
+      "WOKB is the most underweight asset versus target allocation.",
+      "tradeUsd is capped to the smaller of the sell excess and buy deficit."
+    ]
+  },
+  "autochain": {
+    "status": "prepared",
+    "chain": "xlayer",
+    "plannerPayload": {
+      "chain": "xlayer",
+      "inputSymbol": "USDC",
+      "inputTokenAddress": "0x74b7f16337b8972027f6196a17a631ac6de26d22",
+      "outputSymbol": "WOKB",
+      "outputTokenAddress": "0xe538905cf8410324e03a5a23c1c177a474d59b2b",
+      "tradeUsd": 3
+    },
+    "plannerUrl": "https://app.uniswap.org/swap?chain=xlayer&inputCurrency=0x74b7f16337b8972027f6196a17a631ac6de26d22&outputCurrency=0xe538905cf8410324e03a5a23c1c177a474d59b2b&value=3&field=INPUT",
+    "plannerHandoff": {
+      "skill": "uniswap-swap-planner",
+      "prompt": "Use uniswap-swap-planner to prepare an X Layer swap from USDC to WOKB for 3 USDC. Return the best route and a confirm-ready Uniswap URL. Stop before execution.",
+      "stopCondition": "before_execution"
+    },
+    "operatorAction": "confirm_swap",
+    "demoSummary": "Prepared a concrete X Layer Uniswap planner handoff with a ready-to-use downstream skill prompt. Final swap remains operator-confirmed."
+  }
+}

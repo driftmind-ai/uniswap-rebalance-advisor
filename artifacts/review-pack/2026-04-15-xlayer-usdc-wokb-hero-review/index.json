@@ -1,0 +1,49 @@
+{
+  "reviewId": "2026-04-15-xlayer-usdc-wokb-hero-review",
+  "evidenceMode": "hero-review-pack",
+  "heroPath": {
+    "chain": "xlayer",
+    "sellSymbol": "USDC",
+    "buySymbol": "WOKB",
+    "tradeUsd": 5
+  },
+  "sourceFiles": {
+    "readmePath": "README.md",
+    "demoSourcePath": "src/demo.ts",
+    "plannerBridgeSourcePath": "src/planner-bridge.ts",
+    "skillPath": "SKILL.md"
+  },
+  "artifacts": [
+    {
+      "kind": "review-note",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/review-note.md"
+    },
+    {
+      "kind": "hero-decision",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/hero-decision.json"
+    },
+    {
+      "kind": "planner-step",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/planner-step.json"
+    },
+    {
+      "kind": "recorded-tx-note",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/recorded-tx-note.json"
+    },
+    {
+      "kind": "video-prompt-output",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/video-prompt-output.json"
+    },
+    {
+      "kind": "video-planner-output",
+      "path": "artifacts/review-pack/2026-04-15-xlayer-usdc-wokb-hero-review/video-planner-output.json"
+    }
+  ],
+  "notIncluded": [
+    {
+      "kind": "planner-output",
+      "reason": "No verified uniswap-swap-planner output is stored for the bounded 5 USDC canonical release contract."
+    }
+  ],
+  "scope": "Prepared handoff plus operator-confirmed final step. No autonomous final execution claim."
+}

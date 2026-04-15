@@ -1,0 +1,18 @@
+{
+  "autochainStatus": "prepared",
+  "plannerHandoff": {
+    "skill": "uniswap-swap-planner",
+    "prompt": "Use uniswap-swap-planner to prepare an X Layer swap from USDC to WOKB for 5 USDC. Return the best route and a confirm-ready Uniswap URL. Stop before execution.",
+    "stopCondition": "before_execution"
+  },
+  "operatorAction": "confirm_swap",
+  "plannerUrl": "https://app.uniswap.org/swap?chain=xlayer&inputCurrency=0x74b7f16337b8972027f6196a17a631ac6de26d22&outputCurrency=0xe538905cf8410324e03a5a23c1c177a474d59b2b&value=5&field=INPUT",
+  "plannerPayload": {
+    "chain": "xlayer",
+    "inputSymbol": "USDC",
+    "inputTokenAddress": "0x74b7f16337b8972027f6196a17a631ac6de26d22",
+    "outputSymbol": "WOKB",
+    "outputTokenAddress": "0xe538905cf8410324e03a5a23c1c177a474d59b2b",
+    "tradeUsd": 5
+  }
+}

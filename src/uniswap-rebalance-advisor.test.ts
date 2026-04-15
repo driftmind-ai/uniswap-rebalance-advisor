@@ -28,7 +28,7 @@ describe("uniswap-rebalance-advisor", () => {
       ]
     });
     expect(result.executionPlan.nextSkill).toBe("uniswap-swap-planner");
-    expect(result.executionPlan.optionalSkills).toContain("treasury-guard-skill");
+    expect(result.executionPlan.optionalSkills).toEqual([]);
     expect(result.warnings).toEqual([]);
   });
 
