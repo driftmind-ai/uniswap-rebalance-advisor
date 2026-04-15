@@ -1,0 +1,15 @@
+{
+  "name": "uniswap-rebalance-advisor",
+  "description": "Constraint-aware X Layer portfolio rebalance skill that decides hold, rebalance, or blocked and prepares the next Uniswap planning step",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kleggy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "uniswap",
+    "rebalance",
+    "xlayer",
+    "portfolio"
+  ]
+}

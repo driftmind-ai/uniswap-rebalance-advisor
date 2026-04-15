@@ -1,0 +1,21 @@
+schema_version: 1
+name: uniswap-rebalance-advisor
+version: "1.0.0"
+description: "Constraint-aware X Layer portfolio rebalance skill that decides hold, rebalance, or blocked and prepares the next Uniswap planning step"
+author:
+  name: "Kleggy"
+  github: "kleggy00"
+license: MIT
+category: defi-protocol
+tags:
+  - uniswap
+  - rebalance
+  - xlayer
+  - portfolio
+
+components:
+  skill:
+    dir: "."
+
+api_calls: []
+
